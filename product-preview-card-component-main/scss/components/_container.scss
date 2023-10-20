@@ -1,0 +1,23 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.container {
+  background-color: $white;
+  display: grid;
+  width: 600px;
+  max-width: 600px;
+  border-radius: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media only screen and (max-width: 40.625rem) {
+  .container {
+    width: 350px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    img {
+      border-radius: 1rem;
+    }
+  }
+}

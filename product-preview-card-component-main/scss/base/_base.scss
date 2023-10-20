@@ -1,0 +1,32 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&family=Jost&family=Lato:ital,wght@0,100;1,300;1,400&family=Montserrat:ital,wght@0,500;1,600&family=Outfit:wght@400;700&family=Overpass:ital@1&family=Pacifico&family=Permanent+Marker&family=Poppins:wght@100;300;400;500;600&family=Roboto+Condensed&display=swap");
+*,
+*::before,
+*::after {
+  margin: $reset;
+  padding: $reset;
+  box-sizing: border-box;
+  transition: .2s ease
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  min-height: calc(100vh - 1px);
+  @include flex(center, center);
+  background-color: $cream;
+  padding: 1rem;
+}
+
+button {
+  border: $reset;
+  outline: $reset;
+  cursor: pointer;
+}

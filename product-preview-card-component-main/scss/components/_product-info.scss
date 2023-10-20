@@ -1,0 +1,65 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 1rem;
+  .product-header {
+    h2 {
+      font: {
+        size: 16px;
+        weight: 300;
+      }
+      color: $darkGrayishBlue;
+      letter-spacing: 2px;
+      opacity: 0.8;
+    }
+  }
+  .product-name {
+    h2 {
+      font-size: 30px;
+      color: $veryDarkBlue;
+    }
+  }
+  .product-desc {
+    color: $darkGrayishBlue;
+    line-height: 24px;
+  }
+  .product-price {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    &__new {
+      font: {
+        size: 1.7rem;
+        weight: 600;
+      }
+      color: $darkCyan;
+    }
+    &__old {
+        text-decoration: line-through;
+      font: {
+        size: 14px;
+        weight: 400;
+      }
+      color: $darkGrayishBlue;
+    }
+  }
+  .product-button {
+    .add-to-card-button {
+      line-height: 40px;
+      @include flex(center, center);
+      gap: 10px;
+      padding: 0 3rem;
+      background-color: $darkCyan;
+      color: $cream;
+      border-radius: 8px;
+      width: 100%;
+      &:hover {
+        background-color: $veryDarkBlue;
+      }
+    }
+  }
+}

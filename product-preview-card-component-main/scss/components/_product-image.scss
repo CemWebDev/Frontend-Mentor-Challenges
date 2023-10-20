@@ -1,0 +1,9 @@
+.product-image {
+  img {
+    object-fit: cover;
+    width: 100%;
+    display: flex;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+  }
+}
