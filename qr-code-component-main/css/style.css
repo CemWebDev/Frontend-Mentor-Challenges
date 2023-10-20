@@ -1,0 +1,77 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.2s ease;
+}
+
+a {
+  text-decoration: none;
+  margin: 0 2px;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+:root {
+  --white: #fff;
+  --lightGray: hsl(212, 45%, 89%);
+  --grayishBlue: hsl(220, 15%, 55%);
+  --darkBlue: hsl(218, 44%, 22%);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--lightGray);
+  padding: 1rem;
+}
+
+.container {
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 18px;
+  display: flex;
+  max-width: 400px;
+  width: 400px;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.container img {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.container-text {
+  text-align: center;
+}
+
+.container-text h2 {
+  color: var(--darkBlue);
+}
+
+.container-text p {
+  color: var(--grayishBlue);
+}
+
+.attribution {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  bottom: 1rem;
+  align-items: center;
+  justify-content: center;
+  color: var(--darkBlue);
+}
+
+.attribution a {
+  color: var(--darkBlue);
+}
