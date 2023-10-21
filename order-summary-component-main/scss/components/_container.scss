@@ -1,0 +1,36 @@
+@import "../utils/variables";
+
+.container {
+  background-color: $veryPaleBlue;
+  max-width: 400px;
+  width: 400px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  border-radius: 18px;
+  &__image {
+    img {
+      display: flex;
+      border-top-right-radius: 18px;
+      border-top-left-radius: 18px;
+      object-fit: cover;
+      max-width: 400px;
+      width: 400px;
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .container {
+    max-width: 280px;
+    width: 280px;
+    &__image {
+      img {
+        max-width: 280px;
+        width: 280px;
+      }
+    }
+  }
+}

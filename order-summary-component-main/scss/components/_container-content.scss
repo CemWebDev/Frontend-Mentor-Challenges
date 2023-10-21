@@ -1,0 +1,63 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+
+.container {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    padding: 16px;
+    .music-box {
+      @include flex(center, space-between);
+      background-color: #f3f3f3;
+      padding: 16px .75rem;
+      border-radius: .5rem;
+      .left {
+        display: flex;
+        align-items: center;
+        gap: .625rem;
+        .player-text {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          font-size: .8125rem;
+          gap: .25rem;
+          > div:first-child {
+            font: {
+                weight: 600;
+                size: 1rem
+            };
+          }
+        }
+      }
+      .right {
+        a {
+          color: $brightBlue;
+          font-size: 1rem;
+        }
+      }
+    }
+    .button {
+      button {
+        width: 100%;
+        line-height: 1.875rem;
+        padding: 8px 0;
+        background-color: $brightBlue;
+        color: $veryPaleBlue;
+        border-radius: .75rem;
+        box-shadow: 0 .0625rem .875rem $brightBlue;
+        &:hover {
+            opacity: .8;
+        }
+      }
+    }
+    .cancel-button {
+      button {
+        padding: .625rem;
+        background: transparent;
+        color: $darkBlue;
+        font-size: .9375rem;
+      }
+    }
+  }
+}
