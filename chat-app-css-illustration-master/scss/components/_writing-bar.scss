@@ -1,0 +1,35 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+.writing-bar {
+  width: 100%;
+  margin-top: 2rem;
+  position: relative;
+  &__container {
+    display: flex;
+    align-items: center;
+    input {
+      width: 100%;
+      display: flex;
+      padding: 10px 4px;
+      border-radius: 20px;
+      &::placeholder {
+        font-size: 10px;
+        color: $grayishBlue;
+      }
+    }
+    .send-btn {
+      height: 24px;
+      width: 24px;
+      border-radius: 50%;
+      @include flex(center, center);
+      position: absolute;
+      right: 5px;
+      top: 6px;
+      background-color: $veryDarkDesaturatedViolet;
+      i {
+        display: flex;
+        color: $white;
+      }
+    }
+  }
+}

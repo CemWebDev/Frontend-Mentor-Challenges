@@ -1,0 +1,42 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.chat {
+    padding-top: 1rem;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    .admin-message {
+        .dogs {
+            display: flex;
+            gap: 10px;
+            img {
+                max-width: 40px;
+                border-radius: 12px;
+            }
+        }
+    }
+    .price-boxes {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: .25rem;
+        width: 100%;
+        .box {
+            max-width: 220px;
+            width: 100%;
+            padding: 4px;
+            @include flex(center, space-between);
+            background-image: linear-gradient($lightMagenta, $lightViolet);
+            border-radius: 6px;
+            &__left {
+                font-size: 12px;
+                display: flex;
+                align-items: center;
+                gap: 3px;
+                color: $grayishBlue;
+            }
+        }
+    }
+}

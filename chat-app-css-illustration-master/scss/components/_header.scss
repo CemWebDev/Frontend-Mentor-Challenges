@@ -1,0 +1,32 @@
+@import "../utils/variables";
+
+.header {
+  max-width: 450px;
+  h1 {
+    color: $veryDarkDesaturatedViolet;
+  }
+  p {
+    color: $grayishBlue;
+    line-height: 20px;
+  }
+}
+
+.header__component {
+  text-align: center;
+  left: 5.5rem;
+  z-index: 2;
+  width: 100px;
+  height: 24px;
+  position: absolute;
+  top: 0;
+  background-color: $white;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+
+@media only screen and (max-width: 830px) {
+  .header {
+    text-align: center;
+  }
+}

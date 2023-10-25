@@ -1,0 +1,25 @@
+@import "../utils/variables";
+
+.circle-component {
+  position: fixed;
+  z-index: -1;
+  left: -1rem;
+  top: -1rem;
+  width: 60vmin;
+  height: 80vh;
+  background-image: linear-gradient($lightMagenta, $lightViolet);
+  border-bottom-right-radius: 200px;
+  border-bottom-left-radius: 200px;
+  &::after {
+    content: "";
+    position: inherit;
+    width: inherit;
+    height: inherit;
+    z-index: inherit;
+    background-color: $lightGrayish;
+    bottom: -5rem;
+    right: -10rem;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+  }
+}

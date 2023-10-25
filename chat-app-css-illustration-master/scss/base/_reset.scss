@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&family=Epilogue:wght@500;700&family=Jost&family=Lato:ital,wght@0,100;1,300;1,400&family=Montserrat:ital,wght@0,500;1,600&family=Outfit:wght@400;700&family=Overpass:ital@1&family=Pacifico&family=Permanent+Marker&family=Poppins:wght@100;300;400;500;600&family=Red+Hat+Display:wght@500;700;900&family=Roboto+Condensed&family=Rubik:wght@400;500;700&display=swap");
+@import "../utils/variables";
+@import "../utils/mixins";
+
+*,
+*::before,
+*::after {
+  margin: $reset;
+  padding: $reset;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Rubik", sans-serif;
+}
+button, input {
+    border: $reset;
+    outline: $reset ;
+}
+
+button {
+    cursor: pointer;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  @include flex(center, center);
+  padding: 1rem
+}
+
+.container {
+  @include flex(center, space-between);
+  gap: 3rem;
+}
+
+.bg-gray {
+  background-color: $grayishBlue;
+  max-width: 200px;
+  padding: 5px;
+  border-radius: 10px;
+  p {
+    color: $moderateViolet;
+  }
+}
+
+.bg-white {
+  max-width: 160px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: $white;
+  box-shadow: 0 2px 4px rgba($color: #000000, $alpha: .4);
+  p {
+    color: $desaturatedDark;
+  }
+}
+
+.bold {
+    font: {
+        weight: 600;
+        size: 18px
+    }
+    color: $white
+}
+
+.attribution {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  font-size: 10px;
+  margin-top: 9rem;
+  padding-top: 6rem;
+  bottom: 10px;
+}
+
+
+@media only screen and (max-width: 830px) {
+    .container {
+        flex-direction: column;
+    }
+    .header {
+      margin: 1rem 0;
+    }
+}
