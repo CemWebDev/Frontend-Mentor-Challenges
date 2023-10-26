@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&family=Epilogue:wght@500;700&family=Jost&family=Lato:ital,wght@0,100;1,300;1,400&family=Lexend+Deca&family=Montserrat:ital,wght@0,500;1,600&family=Outfit:wght@400;700&family=Overpass:ital@1&family=Pacifico&family=Permanent+Marker&family=Poppins:wght@100;300;400;500;600&family=Red+Hat+Display:wght@500;700;900&family=Roboto+Condensed&family=Rubik:wght@400;500;700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.2s ease;
+}
+
+html {
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+:root {
+  --orange: hsl(31, 77%, 52%);
+  --cyan: hsl(184, 100%, 22%);
+  --darkCyan: hsl(179, 100%, 13%);
+  --white: hsla(0, 0%, 100%, 0.75);
+  --lightGray: hsl(0, 0%, 95%);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--lightGray);
+  padding: 10px;
+}
+
+button {
+  border: 0;
+  outline: 0;
+  line-height: 30px;
+  padding: 4px 1rem;
+  border-radius: 1.5rem;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: var(--lightGray);
+  border: 1px solid transparent;
+}
+
+button:hover {
+  border: 1px solid var(--lightGray);
+  color: var(--lightGray);
+  background: transparent ;
+}
+
+.orange {
+  color: var(--orange);
+}
+
+.cyan {
+  color: var(--cyan);
+}
+
+.dark-cyan {
+  color: var(--darkCyan);
+}
+
+h1 {
+  color: var(--lightGray);
+}
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  max-width: 300px;
+  width: 100%;
+  padding: 1rem;
+  height: 400px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:first-child {
+  background-color: var(--orange);
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.card:nth-child(2) {
+  background-color: var(--cyan);
+}
+
+.card:last-child {
+  background-color: var(--darkCyan);
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.card-content {
+  color: var(--white);
+}
+
+
+@media only screen and (max-width: 40.625rem) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .card:first-child{
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 1rem;
+  }
+  .card:last-child{
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 1rem;
+  }
+}
